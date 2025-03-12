@@ -20,39 +20,39 @@ işlemlerinin ötesinde, **Entity Framework**, **LINQ** sorguları üzerinden **
 ---
 
 ## 📸 Proje Görselleri:
-<img src="mvc5/diyagram.png" width="500" height="300">
-<img src="mvc5/loginpanel.png" width="500" height="300">
-<img src="mvc5/1loginp.png" width="500" height="300">
-<img src="mvc5/caripanel.png" width="500" height="300">
-<img src="mvc5/duyuru ekranı.png" width="500" height="300">
-<img src="mvc5/ayarlarekrani.png" width="500" height="300">
-<img src="mvc5/gelenkutusu.png" width="500" height="300">
-<img src="mvc5/mailatma.png" width="500" height="300">
-<img src="mvc5/mailgönderimsonrası.png" width="500" height="300">
-<img src="mvc5/kargodetay.png" width="500" height="300">
-<img src="mvc5/kargotakip.png" width="500" height="300">
-<img src="mvc5/qr.png" width="500" height="300">
-<img src="mvc5/satis.png" width="500" height="300">
-<img src="mvc5/stokonce.png" width="500" height="300">
-<img src="mvc5/satissonra.png" width="500" height="300">
-<img src="mvc5/kategori.png" width="500" height="300">
-<img src="mvc5/departmanlar.png" width="500" height="300">
-<img src="mvc5/carile.png" width="500" height="300">
-<img src="mvc5/carisatislar.png" width="500" height="300">
-<img src="mvc5/personeller.png" width="500" height="300">
-<img src="mvc5/satislar.png" width="500" height="300">
-<img src="mvc5/urunler.png" width="500" height="300">
-<img src="mvc5/faturalar.png" width="500" height="300">
-<img src="mvc5/dinamikfatura.png" width="500" height="300">
-<img src="mvc5/pdfdokuman.png" width="500" height="300">
-<img src="mvc5/urundetay.png" width="500" height="300">
-<img src="mvc5/grafik1.png" width="500" height="300">
-<img src="mvc5/grafik2.png" width="500" height="300">
-<img src="mvc5/grafik3.png" width="500" height="300">
-<img src="mvc5/istatistik.png" width="500" height="300">
-<img src="mvc5/hızlibakis.png" width="500" height="300">
-<img src="mvc5/caritablosu.png" width="500" height="300">
-<img src="mvc5/urundetay.png" width="500" height="300">
+<img src="mvc5/diyagram.png" width="1024" height="768">
+<img src="mvc5/loginpanel.png" width="1024" height="768">
+<img src="mvc5/1loginp.png" width="1024" height="768">
+<img src="mvc5/caripanel.png" width="1024" height="768">
+<img src="mvc5/duyuru ekranı.png" width="1024" height="768">
+<img src="mvc5/ayarlarekrani.png" width="1024" height="768">
+<img src="mvc5/gelenkutusu.png" width="1024" height="768">
+<img src="mvc5/mailatma.png" width="1024" height="768">
+<img src="mvc5/mailgönderimsonrası.png" width="1024" height="768">
+<img src="mvc5/kargodetay.png" width="1024" height="768">
+<img src="mvc5/kargotakip.png" width="1024" height="768">
+<img src="mvc5/qr.png" width="1024" height="768">
+<img src="mvc5/satis.png" width="1024" height="768">
+<img src="mvc5/stokonce.png" width="1024" height="768">
+<img src="mvc5/satissonra.png" width="1024" height="768">
+<img src="mvc5/kategori.png" width="1024" height="768">
+<img src="mvc5/departmanlar.png" width="1024" height="768">
+<img src="mvc5/carile.png" width="1024" height="768">
+<img src="mvc5/carisatislar.png" width="1024" height="768">
+<img src="mvc5/personeller.png" width="1024" height="768">
+<img src="mvc5/satislar.png" width="1024" height="768">
+<img src="mvc5/urunler.png" width="1024" height="768">
+<img src="mvc5/faturalar.png" width="1024" height="768">
+<img src="mvc5/dinamikfatura.png" width="1024" height="768">
+<img src="mvc5/pdfdokuman.png" width="1024" height="768">
+<img src="mvc5/urundetay.png" width="1024" height="768">
+<img src="mvc5/grafik1.png" width="1024" height="768">
+<img src="mvc5/grafik2.png" width="1024" height="768">
+<img src="mvc5/grafik3.png" width="1024" height="768">
+<img src="mvc5/istatistik.png" width="1024" height="768">
+<img src="mvc5/hızlibakis.png" width="1024" height="768">
+<img src="mvc5/caritablosu.png" width="1024" height="768">
+<img src="mvc5/urundetay.png" width="1024" height="768">
 
 
 
