@@ -20,10 +20,40 @@ işlemlerinin ötesinde, **Entity Framework**, **LINQ** sorguları üzerinden **
 ---
 
 ## 📸 Proje Görselleri:
-![Login](mvc5/diyagram.png)
-![Login](mvc5/loginpanel.png)
-![Admin Girişi](mvc5/1loginp.png)
-![Cari Paneli](mvc5/caripanel.png)
-![Cari Duyuru](mvc5/duyuru ekranı.png)
+<img src="mvc5/diyagram.png" width="700" height="420">
+<img src="mvc5/loginpanel.png" width="700" height="420">
+<img src="mvc5/1loginp.png" width="700" height="420">
+<img src="mvc5/caripanel.png" width="700" height="420">
+<img src="mvc5/duyuru ekranı.png" width="700" height="420">
+<img src="mvc5/ayarlarekrani.png" width="700" height="420">
+<img src="mvc5/gelenkutusu.png" width="700" height="420">
+<img src="mvc5/mailatma.png" width="700" height="420">
+<img src="mvc5/mailgönderimsonrası.png" width="700" height="420">
+<img src="mvc5/kargodetay.png" width="700" height="420">
+<img src="mvc5/kargotakip.png" width="700" height="420">
+<img src="mvc5/qr.png" width="700" height="420">
+<img src="mvc5/satis.png" width="700" height="420">
+<img src="mvc5/stokonce.png" width="700" height="420">
+<img src="mvc5/satissonra.png" width="700" height="420">
+<img src="mvc5/kategori.png" width="700" height="420">
+<img src="mvc5/departmanlar.png" width="700" height="420">
+<img src="mvc5/carile.png" width="700" height="420">
+<img src="mvc5/carisatislar.png" width="700" height="420">
+<img src="mvc5/personeller.png" width="700" height="420">
+<img src="mvc5/satislar.png" width="700" height="420">
+<img src="mvc5/urunler.png" width="700" height="420">
+<img src="mvc5/faturalar.png" width="700" height="420">
+<img src="mvc5/dinamikfatura.png" width="700" height="420">
+<img src="mvc5/pdfdokuman.png" width="700" height="420">
+<img src="mvc5/urundetay.png" width="700" height="420">
+<img src="mvc5/grafik1.png" width="700" height="420">
+<img src="mvc5/grafik2.png" width="700" height="420">
+<img src="mvc5/grafik3.png" width="700" height="420">
+<img src="mvc5/istatistik.png" width="700" height="420">
+<img src="mvc5/hızlibakis.png" width="700" height="420">
+<img src="mvc5/caritablosu.png" width="700" height="420">
+<img src="mvc5/urundetay.png" width="700" height="420">
+
+
 ---
 
