@@ -22,7 +22,7 @@ işlemlerinin ötesinde, **Entity Framework**, **LINQ** sorguları üzerinden **
 ## 📸 Proje Görselleri:
 <img src="mvc5/diyagram.png" width="700" height="420">
 <img src="mvc5/loginpanel.png" width="700" height="420">
-<img src="mvc5/1loginp.png" width="700" height="420">
+<img src="mvc5/1login.png" width="700" height="420">
 <img src="mvc5/caripanel.png" width="700" height="420">
 <img src="mvc5/duyuru ekranı.png" width="700" height="420">
 <img src="mvc5/ayarlarekrani.png" width="700" height="420">
