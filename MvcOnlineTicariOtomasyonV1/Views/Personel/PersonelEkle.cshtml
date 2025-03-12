@@ -1,0 +1,111 @@
+﻿@model MvcOnlineTicariOtomasyonV1.Models.Siniflar.Personel
+
+@{
+    ViewBag.Title = "PersonelEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<div class="personel-page">
+    <h2>Personel Sayfası</h2>
+    <br />
+    @using (Html.BeginForm("PersonelEkle", "Personel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+
+        <form class="personel-form form-group" method="post">
+            @Html.LabelFor(x => x.PersonelAd)
+            @Html.TextBoxFor(x => x.PersonelAd, new { @class = "form-control" })
+            <br />
+            @Html.LabelFor(x => x.PersonelSoyad)
+            @Html.TextBoxFor(x => x.PersonelSoyad, new { @class = "form-control" })
+            <br />
+            @Html.LabelFor(x => x.PersonelGorsel)
+            <input type="file" name="PersonelGorsel" />
+            <br />
+            @Html.LabelFor(x => x.Departman)
+            @Html.DropDownListFor(x => x.Departmanid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+            <br />
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </form>
+    }
+</div>
+
+<style>
+    /* Sadece .personel-page kapsayıcısı içindeki elementleri hedefleyelim */
+    /* .personel-page kapsayıcısının overflow ayarını zorlayalım */
+    .personel-page {
+        overflow: visible !important;
+    }
+
+        /* Form için */
+        .personel-page .personel-form {
+            max-width: 700px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            overflow: visible; /* Select açılan listesinin kesilmemesi için */
+            position: relative; /* Z-index düzenlemesi için referans */
+        }
+
+            /* Select elementinin açılan listesinin diğerlerinden üstte görünmesi için */
+            .personel-page .personel-form select {
+                position: relative;
+                z-index: 1000;
+            }
+
+        .personel-page h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .personel-page label {
+            display: block;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .personel-page .personel-form input[type="text"],
+        .personel-page .personel-form input[type="file"],
+        .personel-page .personel-form select {
+            width: 100%;
+            padding: 6px; /* Önceki 12px'ten artırıldı */
+            margin-bottom: 24px; /* Biraz daha geniş boşluk */
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 18px; /* Daha büyük metin boyutu */
+            background: #fff;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .personel-page input[type="text"]:focus,
+        .personel-page input[type="file"]:focus,
+        .personel-page select:focus {
+            border-color: #1e90ff;
+            transform: scale(1.02);
+            outline: none;
+        }
+
+        /* Buton için de kapsayıcı ile özgül seçici kullanıyoruz */
+        .personel-page .btn.btn-primary {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #1e90ff, #00ced1);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+            .personel-page .btn.btn-primary:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            }
+</style>

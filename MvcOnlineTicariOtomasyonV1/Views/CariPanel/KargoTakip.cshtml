@@ -1,0 +1,134 @@
+﻿@using MvcOnlineTicariOtomasyonV1.Models.Siniflar;
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<KargoDetay>
+
+@{
+    ViewBag.Title = "KargoTakip";
+    Layout = "~/Views/Shared/_CariLayout.cshtml";
+}
+
+
+<br />
+@using (Html.BeginForm("KargoTakip", "CariPanel", FormMethod.Get, new { @class = "search-form" }))
+{
+    <div class="form-group">
+        <label for="p">Kargo Takip Numarası</label>
+        @Html.TextBox("p", null, new { @class = "form-control", placeholder = "Kargoya ait takip kodu girin..." })
+    </div>
+    <button type="submit" class="btn btn-primary">Ara</button>
+}
+
+<br />
+<table class="table departman-table">
+    <thead>
+        <tr>
+            <th>Personel</th>
+            <th>Alıcı</th>
+            <th>Takip Kodu</th>
+            <th>Tarih</th>
+            <th>Detaylar</th>
+            <th>Kargo Takip QR</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var k in Model)
+        {
+            <tr>
+                <td>@k.Personel</td>
+                <td>@k.Alici</td>
+                <td style="color: gray;">@k.TakipKodu</td>
+                <td style="color: gray; font-style: italic;">
+                    @k.Tarih.ToString("dd.MM.yyyy HH:mm")
+                </td>
+                <td>
+                    <a href="/CariPanel/CariKargoTakip/@k.TakipKodu" class="btn detail-btn">Detaylar</a>
+                </td>
+                <!-- QR Kod Butonu -->
+                <td>
+                    <a href="/QR/Index/@k.TakipKodu" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#qrModal" data-takip="@k.TakipKodu">QR Oluştur</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<style>
+    /* Tablo Stili */
+    .departman-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+        .departman-table thead {
+            background: #007bff;
+            color: white;
+            text-align: left;
+        }
+
+        .departman-table th,
+        .departman-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .departman-table tbody tr:hover {
+            background: #f8f9fa;
+            transition: 0.3s;
+        }
+
+    /* Buton Stili */
+    .btn {
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: 6px;
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+        font-weight: bold;
+    }
+
+    /* Silme Butonu */
+    .delete-btn {
+        background: #dc3545;
+    }
+
+        .delete-btn:hover {
+            background: #c82333;
+        }
+
+    /* Güncelleme Butonu */
+    .update-btn {
+        background: #ffc107;
+        color: black;
+    }
+
+        .update-btn:hover {
+            background: #e0a800;
+        }
+
+    /* Detay Butonu */
+    .detail-btn {
+        background: #6c757d;
+    }
+
+        .detail-btn:hover {
+            background: #5a6268;
+        }
+
+    /* Ekle Butonu */
+    .add-btn {
+        background: #28a745;
+        margin-top: 15px;
+        display: inline-block;
+    }
+
+        .add-btn:hover {
+            background: #218838;
+        }
+</style>

@@ -1,0 +1,95 @@
+﻿@model MvcOnlineTicariOtomasyonV1.Models.Siniflar.Departman
+@{
+    ViewBag.Title = "DepartmanGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Departman Güncelleme</h2>
+<br />
+
+@using (Html.BeginForm("DepartmanGuncelle", "Departman", FormMethod.Post))
+{
+    <div class="departman-container">
+        <h2>Departman Güncelleme</h2>
+
+        @using (Html.BeginForm("DepartmanGuncelle", "Departman", FormMethod.Post, new { @class = "departman-form" }))
+        {
+            @Html.HiddenFor(x => x.DepartmanId)
+
+            <div class="form-group">
+                @Html.LabelFor(x => x.DepartmanAd, new { @class = "form-label" })
+                @Html.TextBoxFor(x => x.DepartmanAd, new { @class = "form-control input-style", placeholder = "Departman adını girin" })
+            </div>
+
+            <button class="btn update-btn">Güncelle</button>
+        }
+    </div>
+
+}
+<style>
+    /* Form Konteyneri */
+    .departman-container {
+        max-width: 450px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+    }
+
+        /* Başlık */
+        .departman-container h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+    /* Form Stili */
+    .departman-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Label */
+    .form-label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-align: left;
+        display: block;
+    }
+
+    /* Input */
+    .input-style {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+        .input-style:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        }
+
+    /* Güncelleme Butonu */
+    .update-btn {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-top: 10px;
+    }
+
+        .update-btn:hover {
+            background: #0056b3;
+        }
+
+</style>

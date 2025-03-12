@@ -1,0 +1,160 @@
+﻿@model MvcOnlineTicariOtomasyonV1.Models.Siniflar.Class3
+
+@{
+    ViewBag.Title = "Modern Form";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="form-container">
+    <h2>Kategori ve Ürün Ekle</h2>
+
+    <label for="DrpKategoriler">Kategoriler</label>
+    @Html.DropDownList("DrpKategoriler", Model.Kategoriler, "--Kategori Seçiniz--", new { @class = "form-control" })
+
+    <label for="DrpUrun">Ürünler</label>
+    @Html.DropDownList("DrpUrun", Model.Urunler, "--Ürün Seçiniz--", new { @class = "form-control" })
+
+    <button class="btn add-btn">Ekle</button>
+    <button class="btn update-btn">Güncelle</button>
+    <button class="btn delete-btn">Sil</button>
+</div>
+<script src="~/AdminLTE-3.0.4/docs/assets/plugins/jquery/jquery.min.js"></script>
+<script>
+
+    $(function () {
+
+        $('#DrpKategoriler').change(function () {
+
+            var id = $('#DrpKategoriler').val();
+
+            $.ajax({
+
+                url: '/Kategori/UrunGetir',
+
+                data: { p: id },
+
+                type: "POST",
+
+                dataType: "Json",
+
+                success: function (data) {
+
+                    console.log(data);
+
+                    $('#DrpUrun').empty();
+
+                    for (var i = 0; i < data.length; i++) {
+
+                        $('#DrpUrun').append("<option value='" + data[i].Value + "'>" + data[i].Text + "</Option>");
+
+                    }
+
+                }
+
+            });
+
+        });
+
+    });
+
+</script>
+
+<style>
+    /* Genel Stil */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Form Konteyneri */
+    .form-container {
+        width: 100%;
+        max-width: 500px;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+    }
+
+    /* Başlık */
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    /* Label Stili */
+    label {
+        font-weight: bold;
+        display: block;
+        margin: 10px 0 5px;
+        color: #555;
+    }
+
+    /* Giriş Alanları */
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+            outline: none;
+        }
+
+    /* Buton Stilleri (Tablo ile Aynı) */
+    .btn {
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 6px;
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .delete-btn {
+        background: #dc3545;
+    }
+
+        .delete-btn:hover {
+            background: #c82333;
+        }
+
+    .update-btn {
+        background: #ffc107;
+        color: black;
+    }
+
+        .update-btn:hover {
+            background: #e0a800;
+        }
+
+    .detail-btn {
+        background: #6c757d;
+    }
+
+        .detail-btn:hover {
+            background: #5a6268;
+        }
+
+    .add-btn {
+        background: #28a745;
+    }
+
+        .add-btn:hover {
+            background: #218838;
+        }
+</style>

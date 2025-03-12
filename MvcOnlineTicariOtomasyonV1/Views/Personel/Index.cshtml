@@ -1,0 +1,167 @@
+﻿@using MvcOnlineTicariOtomasyonV1.Models.Siniflar
+@model List<Personel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<div class="personel-container">
+    <h2>Personel Listesi</h2>
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Personel Adı</th>
+                <th>Soyadı</th>
+                <th>Görsel</th>
+                <th>Departman</th>
+                <th>Güncelle</th>
+                <th>Satışlar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var k in Model)
+            {
+                <tr>
+                    <td>@k.PersonelAd</td>
+                    <td>@k.PersonelSoyad</td>
+                    <td class="center-cell">
+                        <img src="@k.PersonelGorsel" alt="Personel Görseli" class="personel-gorsel" />
+                    </td>
+                    <td>@k.Departman.DepartmanAd</td>
+                    <td><a href="/Personel/PersonelGetir/@k.PersonelID" class="btn btn-primary">Güncelle</a></td>
+                    <td><a href="/Departman/DepartmanPersonelSatis/@k.PersonelID" class="btn btn-dark">Satışlar</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a href="/Personel/PersonelEkle" class="btn btn-success add-btn">+ Personel Ekle</a>
+</div>
+
+
+
+<style>
+    /* Ana Konteyner */
+    .personel-container {
+        max-width: 95%;
+        margin: 50px auto;
+        padding: 30px;
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        text-align: center;
+    }
+
+        /* Başlık */
+        .personel-container h2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: #222;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+    /* Tablo Stili */
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 12px;
+        overflow: hidden;
+        font-size: 18px;
+    }
+
+        .table thead {
+            background: #007bff;
+            color: white;
+            font-size: 20px;
+        }
+
+        .table th, .table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .table tbody tr:hover {
+            background: rgba(0, 123, 255, 0.1);
+            transition: 0.3s;
+        }
+
+    /* Görsel Stili */
+    .center-cell {
+        text-align: center;
+    }
+
+    .personel-gorsel {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #007bff;
+        transition: 0.3s;
+    }
+
+        .personel-gorsel:hover {
+            transform: scale(1.1);
+            border-color: #0056b3;
+        }
+
+    /* Buton Stilleri */
+    .btn {
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .btn-primary {
+        background: #007bff;
+        color: white;
+        border: none;
+    }
+
+        .btn-primary:hover {
+            background: #0056b3;
+        }
+
+    .btn-dark {
+        background: #343a40;
+        color: white;
+    }
+
+        .btn-dark:hover {
+            background: #23272b;
+        }
+
+    .btn-warning {
+        background: #ffc107;
+        color: #222;
+    }
+
+        .btn-warning:hover {
+            background: #e0a800;
+        }
+
+    /* Ekle Butonu */
+    .add-btn {
+        display: inline-block;
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 12px 20px;
+        background: #28a745;
+        color: white;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+        .add-btn:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+
+</style>

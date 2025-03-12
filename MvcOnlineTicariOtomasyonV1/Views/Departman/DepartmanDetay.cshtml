@@ -1,0 +1,95 @@
+﻿@using MvcOnlineTicariOtomasyonV1.Models.Siniflar
+@model List<Personel>
+@{
+    ViewBag.Title = "DepartmanDetay";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>DepartmanDetay Sayfası</h2>
+<br />
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active"> @ViewBag.d</li>
+</ol>
+<table class="table personel-table">
+    <thead>
+        <tr>
+            <th>AD</th>
+            <th>SOYAD</th>
+            <th>GÖRSEL</th>
+            <th>SATIŞLAR</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.PersonelAd</td>
+                <td>@x.PersonelSoyad</td>
+                <td><img src="@x.PersonelGorsel" alt="Personel Görseli" class="personel-img"></td>
+                <td>
+                    <a href="/Departman/DepartmanPersonelSatis/@x.PersonelID" class="btn sales-btn">SATIŞLAR</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    /* Tablo Stili */
+    .personel-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+        .personel-table thead {
+            background: #007bff;
+            color: #fff;
+            text-align: left;
+        }
+
+        .personel-table th,
+        .personel-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .personel-table tbody tr:hover {
+            background: #f8f9fa;
+            transition: 0.3s;
+        }
+
+    /* Görsel Stili */
+    .personel-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #007bff;
+        transition: transform 0.3s;
+    }
+
+        .personel-img:hover {
+            transform: scale(1.1);
+        }
+
+    /* Buton Stili */
+    .sales-btn {
+        display: inline-block;
+        background: #28a745;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+        .sales-btn:hover {
+            background: #218838;
+        }
+
+</style>

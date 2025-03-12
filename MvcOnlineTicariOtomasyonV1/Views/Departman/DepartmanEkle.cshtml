@@ -1,0 +1,24 @@
+﻿@model MvcOnlineTicariOtomasyonV1.Models.Siniflar.Departman
+@{
+    ViewBag.Title = "Departman Ekle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-lg border-0 rounded">
+        <div class="card-header bg-primary text-white text-center">
+            <h4 class="mb-0">Departman Ekle</h4>
+        </div>
+        <div class="card-body p-4">
+            <form method="post">
+                <div class="mb-3">
+                    @Html.LabelFor(x => x.DepartmanAd, new { @class = "form-label fw-bold" })
+                    @Html.TextBoxFor(x => x.DepartmanAd, new { @class = "form-control", placeholder = "Departman Adını Girin" })
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-success w-100 py-2">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

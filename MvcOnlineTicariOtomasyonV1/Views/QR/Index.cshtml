@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<div class="container mt-4">
+    <div class="card shadow-lg border-0 rounded">
+        <div class="card-header bg-primary text-white text-center">
+            <h4 class="mb-0">QR Kod Oluştur</h4>
+        </div>
+        <div class="card-body p-4">
+            @using (Html.BeginForm("Index", "QR", FormMethod.Post, new { @class = "text-center" }))
+            {
+                <div class="mb-3">
+                    <input type="text" name="kod" class="form-control text-center" placeholder="QR İçin Metin Girin" required />
+                </div>
+                <button type="submit" class="btn btn-success w-100 py-2">QR Oluştur</button>
+            }
+
+            <br />
+
+            @if (ViewBag.karekodimage != null)
+            {
+                <div class="text-center mt-4">
+                    <img src="@ViewBag.karekodimage" alt="QR Kod" class="img-fluid border rounded shadow-lg" style="max-width: 400px;" />
+                </div>
+            }
+        </div>
+    </div>
+

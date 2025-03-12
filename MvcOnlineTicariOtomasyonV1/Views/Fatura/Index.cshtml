@@ -1,0 +1,148 @@
+﻿@using MvcOnlineTicariOtomasyonV1.Models.Siniflar;
+@model List<Faturalar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2 class="page-title">Fatura</h2>
+
+<table class="table table-modern">
+    <thead>
+        <tr>
+            <th>Seri ve Sıra No</th>
+            <th>Tarih</th>
+            <th>Saat</th>
+            <th>Toplam</th>
+            <th>Güncelle</th>
+            <th>Detaylar</th>
+            <th>Yeni Kalem</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var k in Model)
+        {
+            <tr>
+                <td> @k.FaturaSeriNo @k.FaturaSıraNo </td>
+                <td>@k.FaturaTarih.ToString("dd.MM.yyyy")</td>
+                <td> @k.Saat </td>
+                <td> @k.Toplam ₺</td>
+                <td><a href="/Fatura/FaturaGetir/@k.FaturaID" class="btn btn-update">Güncelle</a></td>
+                <td><a href="/Fatura/FaturaDetay/@k.FaturaID" class="btn btn-detail">Departman Detay</a></td>
+                <td><a href="/Fatura/FaturaDetay/@k.FaturaID" class="btn btn-success">Yeni Kalem</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Fatura/FaturaEkle" class="btn btn-new">Yeni Fatura Ekle</a>
+<br />
+<br />
+<button type="button" class="btn btn-warning" style="background-color:#28a745; color:white" data-toggle="modal" data-target="#Modal1"> Pop-up Penceresi</button>
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Pop-up Diyalog Ekranı</h2>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <td> seri no</td>
+                        <td> sıra no</td>
+                        <td> tutar</td>
+                    </tr>
+                    @foreach (var x in Model)
+                    {
+                        <tr>
+                            <td>
+                                @x.FaturaSeriNo
+                            </td><td>
+                                @x.FaturaSıraNo
+                            </td>
+                            <td>
+                                @x.Toplam
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Tamam</button>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    /* Genel Sayfa Stili */
+    .page-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    /* Tablo Stili */
+    .table-modern {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+
+        .table-modern thead {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .table-modern th, .table-modern td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .table-modern tbody tr:hover {
+            background-color: #f7f7f7;
+            transition: background-color 0.3s ease;
+        }
+
+    /* Butonlar */
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+        border-radius: 6px;
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-update {
+        background-color: #ffc107;
+    }
+
+        .btn-update:hover {
+            background-color: #e0a800;
+        }
+
+    .btn-detail {
+        background-color: #17a2b8;
+    }
+
+        .btn-detail:hover {
+            background-color: #138496;
+        }
+
+    .btn-new {
+        display: inline-block;
+        margin-top: 20px;
+        background-color: #28a745;
+    }
+
+        .btn-new:hover {
+            background-color: #218838;
+        }
+</style>

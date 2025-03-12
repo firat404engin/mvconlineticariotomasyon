@@ -1,0 +1,86 @@
+﻿@using MvcOnlineTicariOtomasyonV1.Models.Siniflar
+@model List<SatisHareket>
+@{
+    ViewBag.Title = "DepartmanPersonelSatis";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<h2>DepartmanPersonelSatis</h2>
+<br />
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active"> PERSONEL : @ViewBag.dpers</li>
+</ol>
+<table class="table satis-table">
+    <thead>
+        <tr>
+            <th>ÜRÜN</th>
+            <th>CARİ</th>
+            <th>FİYAT</th>
+            <th>ADET</th>
+            <th>TOPLAM</th>
+            <th>TARİH</th>
+            <th>YAZDIR</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Uruns.UrunAd</td>
+                <td>@x.Cariler.CariAd @x.Cariler.CariSoyad</td>
+                <td>@x.Fiyat</td>
+                <td>@x.Adet</td>
+                <td>@x.ToplamTutar</td>
+                <td>@Convert.ToDateTime(x.Tarih).ToString("dd/MM/yyyy")</td>
+                <td>
+                    <a href="#" class="btn print-btn">YAZDIR</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    /* Tablo Stili */
+    .satis-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+        .satis-table thead {
+            background: #007bff;
+            color: #fff;
+            text-align: left;
+        }
+
+        .satis-table th,
+        .satis-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .satis-table tbody tr:hover {
+            background: #f8f9fa;
+            transition: 0.3s;
+        }
+
+    /* Buton Stili */
+    .print-btn {
+        display: inline-block;
+        background: #17a2b8;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+        .print-btn:hover {
+            background: #138496;
+        }
+
+</style>

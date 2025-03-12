@@ -1,0 +1,103 @@
+﻿@model MvcOnlineTicariOtomasyonV1.Models.Siniflar.SatisHareket
+
+@{
+    ViewBag.Title = "SatisYap";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>SatisYap</h2>
+<form class="form-group" method="post">
+    <br />
+
+    @Html.LabelFor(x => x.Urunid, "Ürün ID")
+    <input type="text" name="Urunid" value="@ViewBag.dgr1" class="form-control" readonly />
+
+    @Html.LabelFor(x => x.Personel, "Personel Adı")
+    @Html.DropDownListFor(x => x.PersonelID, (List<SelectListItem>)ViewBag.dgr3,
+    new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.Cariid, "Cari Adı")
+    @Html.TextBoxFor(x => x.Cariid, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.Adet)
+    <input type="number"name="Adet" class="form-control" min="0" placeholder="Adet Sayısı Girin" id="txt1" onkeyup="sum();" />
+
+    @Html.LabelFor(x => x.Fiyat)
+    <input type="text" name="Fiyat" value="@ViewBag.dgr2" class="form-control" id="txt2" onkeyup="sum();" />
+
+    @Html.LabelFor(x => x.ToplamTutar, "Toplam Tutar")
+    <input type="text" name="ToplamTutar" value="0" class="form-control" id="txt3" readonly />
+
+    <button class="btn btn-primary">Satış Yap</button>
+</form>
+<script>
+    function sum() {
+        var sayi1 = document.getElementById('txt1').value;
+        var sayi2 = document.getElementById('txt2').value;
+        var sonuc = parseInt(sayi1) * parseInt(sayi2);
+        if (!isNaN(sonuc)) {
+            document.getElementById('txt3').value = sonuc;
+        }
+    }
+</script>
+<style>
+    form {
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+        font-weight: 600;
+    }
+
+    label {
+        font-weight: 600;
+        margin-bottom: 5px; /* Etiket ve form elemanı arasındaki boşluğu azaltmak için */
+        display: block;
+        color: #555;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 8px 10px; /* Daha ince padding */
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            outline: none;
+        }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 15px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.2s;
+    }
+
+        button:hover {
+            background: #0056b3;
+            transform: scale(1.02);
+        }
+
+        button:active {
+            background: #004085;
+        }
+</style>

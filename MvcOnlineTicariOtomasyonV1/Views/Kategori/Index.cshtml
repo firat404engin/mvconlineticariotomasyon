@@ -1,0 +1,80 @@
+﻿@using MvcOnlineTicariOtomasyonV1.Models.Siniflar;
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<Kategori>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<table class="table table-bordered" style="margin-top:20px;">
+    <tr>
+        <td>Kategori Adı</td>
+    </tr>
+
+    @foreach (var k in Model)
+    {
+        <tr>
+            <td>
+                @k.KategoriAd
+            </td>
+            <td><a  href="/Kategori/KategoriSil/@k.KategoriID" class="btn btn-warning">Sil</a></td>
+            <td><a href="/Kategori/KategoriGetir/@k.KategoriID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+
+    }
+
+</table>
+@Html.PagedListPager((IPagedList)Model,sayfa => Url.Action("Index", new {sayfa}))
+<a href="/Kategori/KategoriEkle" class="btn btn-primary">Kategori Ekle</a>
+
+<style>
+    .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
+.pagination li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    border-radius: 8px;
+    background: #f1f1f1;
+    transition: all 0.3s ease;
+}
+
+.pagination li a:hover {
+    background: #007bff;
+    color: white;
+    transform: scale(1.1);
+}
+
+.pagination .active a {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.pagination .disabled a {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+</style>

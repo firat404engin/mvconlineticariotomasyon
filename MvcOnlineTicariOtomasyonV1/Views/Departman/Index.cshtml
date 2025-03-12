@@ -1,0 +1,118 @@
+﻿@using MvcOnlineTicariOtomasyonV1.Models.Siniflar;
+@model List<Departman>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<table class="table departman-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Departman Adı</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+            <th>Departman Detay</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var k in Model)
+        {
+            <tr>
+                <td>@k.DepartmanId</td>
+                <td>@k.DepartmanAd</td>
+                <td>
+                    <a href="/Departman/DepartmanSil/@k.DepartmanId" class="btn delete-btn">Sil</a>
+                </td>
+                <td>
+                    <a href="/Departman/DepartmanGetir/@k.DepartmanId" class="btn update-btn">Güncelle</a>
+                </td>
+                <td>
+                    <a href="/Departman/DepartmanDetay/@k.DepartmanId" class="btn detail-btn">Departman Detay</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Departman/DepartmanEkle" class="btn add-btn">Departman Ekle</a>
+
+
+<style>
+    /* Tablo Stili */
+    .departman-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+        .departman-table thead {
+            background: #007bff;
+            color: white;
+            text-align: left;
+        }
+
+        .departman-table th,
+        .departman-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .departman-table tbody tr:hover {
+            background: #f8f9fa;
+            transition: 0.3s;
+        }
+
+    /* Buton Stili */
+    .btn {
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: 6px;
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+        font-weight: bold;
+    }
+
+    /* Silme Butonu */
+    .delete-btn {
+        background: #dc3545;
+    }
+
+        .delete-btn:hover {
+            background: #c82333;
+        }
+
+    /* Güncelleme Butonu */
+    .update-btn {
+        background: #ffc107;
+        color: black;
+    }
+
+        .update-btn:hover {
+            background: #e0a800;
+        }
+
+    /* Detay Butonu */
+    .detail-btn {
+        background: #6c757d;
+    }
+
+        .detail-btn:hover {
+            background: #5a6268;
+        }
+
+    /* Ekle Butonu */
+    .add-btn {
+        background: #28a745;
+        margin-top: 15px;
+        display: inline-block;
+    }
+
+        .add-btn:hover {
+            background: #218838;
+        }
+</style>

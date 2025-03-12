@@ -1,0 +1,131 @@
+﻿@model MvcOnlineTicariOtomasyonV1.Models.Siniflar.Faturalar
+@{
+    ViewBag.Title = "FaturaGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="form-container">
+    <h2 class="page-title">Fatura Getir</h2>
+
+    @using (Html.BeginForm("FaturaGuncelle", "Fatura", FormMethod.Post))
+    {
+        @Html.HiddenFor(x => x.FaturaID)
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.FaturaSeriNo)
+            @Html.TextBoxFor(x => x.FaturaSeriNo, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.FaturaSıraNo)
+            @Html.TextBoxFor(x => x.FaturaSıraNo, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.VergiDairesi)
+            @Html.TextBoxFor(x => x.VergiDairesi, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.FaturaTarih)
+            @Html.TextBoxFor(x => x.FaturaTarih, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.Saat)
+            @Html.TextBoxFor(x => x.Saat, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.TeslimEden)
+            @Html.TextBoxFor(x => x.TeslimEden, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(x => x.TeslimAlan)
+            @Html.TextBoxFor(x => x.TeslimAlan, new { @class = "form-control" })
+        </div>
+
+        <button type="submit" class="btn btn-update">Güncelle</button>
+    }
+</div>
+
+
+<style>
+    /* Genel Sayfa Stili */
+    .page-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    /* Form Alanı */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    /* Input Alanları */
+    .form-control {
+        width: 100%;
+        height: 45px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: 2px solid #ced4da;
+        margin-bottom: 15px;
+    }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+        }
+
+    /* Butonlar */
+    button.btn {
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 8px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        transition: 0.3s ease;
+        cursor: pointer;
+    }
+
+        button.btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+    /* Başlık */
+    h2 {
+        font-size: 32px;
+        font-weight: 600;
+        color: #333;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    /* Formun Genel Konteyneri */
+    .form-container {
+        max-width: 700px;
+        margin: 0 auto;
+        background-color: #f8f9fa;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Form Alanı ve Başlık */
+    .page-title {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+</style>
