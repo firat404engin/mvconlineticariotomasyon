@@ -34,7 +34,8 @@ işlemlerinin ötesinde, **Entity Framework**, **LINQ** sorguları üzerinden **
 <img src="mvc5/qr.png" width="700" height="420">
 <img src="mvc5/satis.png" width="700" height="420">
 <img src="mvc5/stokonce.png" width="700" height="420">
-<img src="mvc5/satissonra.png" width="700" height="420">
+<img src="mvc5/satisonrasi2.png" width="700" height="420">
+<img src="mvc5/mvc5/stokazaltma.png" width="700" height="420">
 <img src="mvc5/kategori.png" width="700" height="420">
 <img src="mvc5/departmanlar.png" width="700" height="420">
 <img src="mvc5/carile.png" width="700" height="420">
