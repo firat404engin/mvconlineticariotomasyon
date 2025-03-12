@@ -20,8 +20,10 @@ işlemlerinin ötesinde, **Entity Framework**, **LINQ** sorguları üzerinden **
 ---
 
 ## 📸 Proje Görselleri:
+![Login](mvc5/diyagram.png)
 ![Login](mvc5/loginpanel.png)
-![Admin Girişi](mvc5/1loginpanel.png)
-
+![Admin Girişi](mvc5/1loginp.png)
+![Cari Paneli](mvc5/caripanel.png)
+![Cari Duyuru](mvc5/duyuru ekranı.png)
 ---
 
