@@ -20,39 +20,40 @@ işlemlerinin ötesinde, **Entity Framework**, **LINQ** sorguları üzerinden **
 ---
 
 ## 📸 Proje Görselleri:
-![Login](mvc5/diyagram.png =500x300)
-![Login](mvc5/loginpanel.png =500x300)
-![Admin Girişi](mvc5/1loginp.png =500x300)
-![Cari Paneli](mvc5/caripanel.png =500x300)
-![Cari Duyuru](mvc5/duyuru ekranı.png =500x300)
-![Cari Ayarlar](mvc5/ayarlarekrani.png =500x300)
-![Cari Gelen Kutusu](mvc5/gelenkutusu.png =500x300)
-![Cari Mail Atma](mvc5/mailatma.png =500x300)
-![Cari Gönderilen Kutusu](mvc5/mailgönderimsonrası.png =500x300)
-![Cari Kargo Detay](mvc5/kargodetay.png =500x300)
-![Cari Kargo Detay](mvc5/kargotakip.png =500x300)
-![Cari QR Takip](mvc5/qr.png =500x300)
-![Cari QR Takip](mvc5/satis.png =500x300)
-![Cari QR Takip](mvc5/stokonce.png =500x300)
-![Cari QR Takip](mvc5/satissonra.png =500x300)
-![Cari QR Takip](mvc5/kategori.png =500x300)
-![Cari QR Takip](mvc5/departmanlar.png =500x300)
-![Cari QR Takip](mvc5/carile.png =500x300)
-![Cari QR Takip](mvc5/carisatislar.png =500x300)
-![Cari QR Takip](mvc5/personeller.png =500x300)
-![Cari QR Takip](mvc5/satislar.png =500x300)
-![Cari QR Takip](mvc5/urunler.png =500x300)
-![Cari QR Takip](mvc5/faturalar.png =500x300)
-![Cari QR Takip](mvc5/dinamikfatura.png =500x300)
-![Cari QR Takip](mvc5/pdfdokuman.png =500x300)
-![Cari QR Takip](mvc5/urundetay.png =500x300)
-![Cari QR Takip](mvc5/grafik1.png =500x300)
-![Cari QR Takip](mvc5/grafik2.png =500x300)
-![Cari QR Takip](mvc5/grafik3.png =500x300)
-![Cari QR Takip](mvc5/istatistik.png =500x300)
-![Cari QR Takip](mvc5/hızlibakis.png =500x300)
-![Cari QR Takip](mvc5/caritablosu.png =500x300)
-![Cari QR Takip](mvc5/urundetay.png =500x300)
+<img src="mvc5/diyagram.png" width="500" height="300">
+<img src="mvc5/loginpanel.png" width="500" height="300">
+<img src="mvc5/1loginp.png" width="500" height="300">
+<img src="mvc5/caripanel.png" width="500" height="300">
+<img src="mvc5/duyuru ekranı.png" width="500" height="300">
+<img src="mvc5/ayarlarekrani.png" width="500" height="300">
+<img src="mvc5/gelenkutusu.png" width="500" height="300">
+<img src="mvc5/mailatma.png" width="500" height="300">
+<img src="mvc5/mailgönderimsonrası.png" width="500" height="300">
+<img src="mvc5/kargodetay.png" width="500" height="300">
+<img src="mvc5/kargotakip.png" width="500" height="300">
+<img src="mvc5/qr.png" width="500" height="300">
+<img src="mvc5/satis.png" width="500" height="300">
+<img src="mvc5/stokonce.png" width="500" height="300">
+<img src="mvc5/satissonra.png" width="500" height="300">
+<img src="mvc5/kategori.png" width="500" height="300">
+<img src="mvc5/departmanlar.png" width="500" height="300">
+<img src="mvc5/carile.png" width="500" height="300">
+<img src="mvc5/carisatislar.png" width="500" height="300">
+<img src="mvc5/personeller.png" width="500" height="300">
+<img src="mvc5/satislar.png" width="500" height="300">
+<img src="mvc5/urunler.png" width="500" height="300">
+<img src="mvc5/faturalar.png" width="500" height="300">
+<img src="mvc5/dinamikfatura.png" width="500" height="300">
+<img src="mvc5/pdfdokuman.png" width="500" height="300">
+<img src="mvc5/urundetay.png" width="500" height="300">
+<img src="mvc5/grafik1.png" width="500" height="300">
+<img src="mvc5/grafik2.png" width="500" height="300">
+<img src="mvc5/grafik3.png" width="500" height="300">
+<img src="mvc5/istatistik.png" width="500" height="300">
+<img src="mvc5/hızlibakis.png" width="500" height="300">
+<img src="mvc5/caritablosu.png" width="500" height="300">
+<img src="mvc5/urundetay.png" width="500" height="300">
+
 
 
 ---
